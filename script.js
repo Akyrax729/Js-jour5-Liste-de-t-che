@@ -108,9 +108,35 @@ btn.addEventListener('click', function()
                         modify.classList.add('absolute')
                         btn5.textContent = ('Valider')
                         divbtn.removeChild(btn4)
-                        // Pas fini
                     }
                 )
+                btn5.addEventListener('click', function () 
+                {
+                    table.pop(input.value.toLocaleLowerCase())
+                    div.textContent= (modify.value)
+                    table.push(modify.value)
+
+                    toDo.appendChild(div)
+                    div.classList.add('chose')
+
+                    div.appendChild(divbtn)
+                    divbtn.classList.add('btns')
+
+                    divbtn.appendChild(btn1)
+                    btn1.classList.add('btn-done')
+                    btn1.textContent = ('Terminer')
+
+                    divbtn.appendChild(btn2)
+                    btn2.classList.add('btn-del')
+                    btn2.textContent = ('Supprimer')
+
+                    divbtn.insertBefore(btn4, btn1)
+                    btn4.classList.add('btn-modif')
+                    btn4.textContent = ('Modifier')
+
+                    divbtn.removeChild(btn5)
+                }
+            )
             }
         }
     }
